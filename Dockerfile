@@ -1,7 +1,7 @@
 FROM gliderlabs/alpine
 MAINTAINER Joeri van Dooren <ure@mororless.be>
 
-RUN apk --update add php-apache2 curl php7-zip php7-common php7-wddx php7-xmlrpc php7-xml php7 php7-zlib php7-tidy php7-xsl php7-xmlreader php7-sysvmsg php7-sysvsem php7-pgsql php7-pdo_pgsql php7-session php7-pspell php7-shmop php7-sqlite3 php7-posix php7-sysvshm php7-snmp php7-readline php7-sockets php7-phar php7-pdo_sqlite php7-soap php7-odbc php7-pdo_mysql php7-pcntl php7-json php7-ldap php7-mcrypt php7-pdo_odbc php7-openssl php7-mysqli php7-intl php7-pdo_dblib php7-mysqlnd php7-opcache php7-pdo php7-mbstring php7-gmp php7-gettext php7-ctype php7-dom php7-calendar php7-enchant php7-dba php7-bz2 php7-gd ssmtp nodejs git mysql-client && rm -f /var/cache/apk/* && \
+RUN apk --update add php-apache2 curl php7 php7-zip php7-common php7-wddx php7-xmlrpc php7-xml php7 php7-zlib php7-tidy php7-xsl php7-xmlreader php7-sysvmsg php7-sysvsem php7-pgsql php7-pdo_pgsql php7-session php7-pspell php7-shmop php7-sqlite3 php7-posix php7-sysvshm php7-snmp php7-readline php7-sockets php7-phar php7-pdo_sqlite php7-soap php7-odbc php7-pdo_mysql php7-pcntl php7-json php7-ldap php7-mcrypt php7-pdo_odbc php7-openssl php7-mysqli php7-intl php7-pdo_dblib php7-mysqlnd php7-opcache php7-pdo php7-mbstring php7-gmp php7-gettext php7-ctype php7-dom php7-calendar php7-enchant php7-dba php7-bz2 php7-gd ssmtp nodejs git mysql-client && rm -f /var/cache/apk/* && \
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 mkdir /app && chown -R apache:apache /app && \
