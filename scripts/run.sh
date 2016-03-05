@@ -26,7 +26,7 @@ echo "oc:x:`id -u`:0:oc:/:/sbin/nologin" >> /etc/passwd
 
 # set apache as owner/group
 if [ "$FIX_OWNERSHIP" != "" ]; then
-	chown -R oc:root /app
+	chown -R 1000060000:0 /app
 fi
 
 echo "[${STAMP}] Starting daemon..."
