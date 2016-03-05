@@ -29,6 +29,10 @@ if [ "$FIX_OWNERSHIP" != "" ]; then
 	chown -R 1000060000:0 /app
 fi
 
+if [ -f /build/run.sh ]; then
+   echo "Running /build/run.sh"
+fi
+
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
 httpd -D FOREGROUND
