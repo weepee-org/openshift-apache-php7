@@ -12,6 +12,9 @@ do
 	fi
 done
 
+echo "oc:x:`id -u`:0:oc:/:/sbin/nologin" >> /etc/passwd
+
+
 # execute any pre-exec scripts, useful for images
 # based on this image
 for i in /scripts/pre-exec.d/*sh
@@ -21,13 +24,6 @@ do
 		. "${i}"
 	fi
 done
-
-echo "oc:x:`id -u`:0:oc:/:/sbin/nologin" >> /etc/passwd
-
-# set apache as owner/group
-if [ "$FIX_OWNERSHIP" != "" ]; then
-	chown -R 1000060000:0 /app
-fi
 
 if [ -f /build/run.sh ]; then
    echo "Running /build/run.sh"
