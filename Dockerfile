@@ -10,7 +10,8 @@ mkdir /app && chmod a+rwx /app && \
 mkdir /run/apache2/ && \
 chmod a+rwx /run/apache2/ && \
 npm install -g bower && \
-mkdir /.composer && chmod a+rwx /.composer
+mkdir /.composer && chmod a+rwx /.composer && \
+ln -s /usr/bin/php7 /usr/bin/php
 
 # Apache config
 ADD httpd.conf /etc/apache2/httpd.conf
