@@ -9,7 +9,8 @@ curl -sS https://getcomposer.org/installer | php7 -- --install-dir=/usr/local/bi
 mkdir /app && chmod a+rwx /app && \
 mkdir /run/apache2/ && \
 chmod a+rwx /run/apache2/ && \
-npm install -g bower
+npm install -g bower && \
+mkdir /.composer && chmod a+rwx /.composer
 
 # Apache config
 ADD httpd.conf /etc/apache2/httpd.conf
