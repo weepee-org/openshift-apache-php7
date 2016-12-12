@@ -30,6 +30,8 @@ if [ -f /build/run.sh ]; then
 	 /build/run.sh
 fi
 
+ulimit -c 0
+
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
 httpd -D FOREGROUND
